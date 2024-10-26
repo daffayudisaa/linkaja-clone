@@ -31,13 +31,29 @@ class _NavbarState extends State<Navbar> {
         child: currentScreen,
         bucket: bucket,
       ),
-      floatingActionButton: FloatingActionButton(
-        backgroundColor: Colors.red,
-        child: Icon(
-          HugeIcons.strokeRoundedQrCode,
-          color: Colors.white,
-        ),
-        onPressed: () {},
+      floatingActionButton: Column(
+        mainAxisSize: MainAxisSize.min,
+        children: [
+          SizedBox(height: 40),
+          FloatingActionButton(
+            backgroundColor: Colors.red,
+            splashColor: Colors.transparent,
+            child: Icon(
+              HugeIcons.strokeRoundedQrCode,
+              color: Colors.white,
+            ),
+            onPressed: () {},
+          ),
+          SizedBox(height: 10),
+          Text(
+            'Pay',
+            style: TextStyle(
+              color: Colors.grey,
+              fontSize: 13,
+              fontWeight: FontWeight.bold,
+            ),
+          ),
+        ],
       ),
       floatingActionButtonLocation: FloatingActionButtonLocation.centerDocked,
       bottomNavigationBar: BottomAppBar(
@@ -51,6 +67,8 @@ class _NavbarState extends State<Navbar> {
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
                   MaterialButton(
+                    highlightColor: Colors.transparent,
+                    splashColor: Colors.transparent,
                     minWidth: 40,
                     onPressed: () {
                       setState(() {
@@ -75,6 +93,8 @@ class _NavbarState extends State<Navbar> {
                     ),
                   ),
                   MaterialButton(
+                    highlightColor: Colors.transparent,
+                    splashColor: Colors.transparent,
                     minWidth: 40,
                     onPressed: () {
                       setState(() {
@@ -104,6 +124,8 @@ class _NavbarState extends State<Navbar> {
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
                   MaterialButton(
+                    highlightColor: Colors.transparent,
+                    splashColor: Colors.transparent,
                     minWidth: 40,
                     onPressed: () {
                       setState(() {
@@ -128,6 +150,8 @@ class _NavbarState extends State<Navbar> {
                     ),
                   ),
                   MaterialButton(
+                    highlightColor: Colors.transparent,
+                    splashColor: Colors.transparent,
                     minWidth: 40,
                     onPressed: () {
                       setState(() {
